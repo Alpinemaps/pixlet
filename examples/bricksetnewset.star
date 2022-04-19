@@ -8,7 +8,7 @@ def main():
     if rep.status_code != 200:
         fail("Brickset request failed with status %d", rep.status_code)
 
-    lego = rep.json()["number"]["name"]
+    lego = rep.json()
 
     return render.Root(
         child = render.Text("Set: " % lego)
