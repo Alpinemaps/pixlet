@@ -11,5 +11,5 @@ def main():
     lego = rep.json()["sets"]
 
     return render.Root(
-        child = render.Text("Set: %d" % lego)
+        child = render.Text("Set: %s" % lego)
     )
