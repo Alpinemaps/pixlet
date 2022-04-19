@@ -1,7 +1,7 @@
 load("render.star", "render")
 load("http.star", "http")
 
-BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'2022-04-15','year':'2022'}"
+BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'2022-04-15','year':'2022','orderBy':'updatedSinceDESC'}"
 
 def main():
     rep = http.get(BRICKSET_URL)
