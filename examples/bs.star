@@ -10,7 +10,8 @@ def main():
 
     lego0 = rep.json()["sets"][0]["name"]
     lego1 = rep.json()["sets"][1]["name"]
+    lego = (lego0, lego1)
 
     return render.Root(
-        child = render.Text("Set: %s" % (lego0, lego1))
+        child = render.Text("Set: %s" % lego)
     )
