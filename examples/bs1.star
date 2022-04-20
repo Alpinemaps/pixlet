@@ -13,8 +13,8 @@ def main(config):
     lego0number = rep.json()["sets"][0]["number"]
     lego1name = rep.json()["sets"][1]["name"]
     lego1number = rep.json()["sets"][1]["number"]
-    lego1name = rep.json()["sets"][2]["name"]
-    lego1number = rep.json()["sets"][2]["number"]
+    lego2name = rep.json()["sets"][2]["name"]
+    lego2number = rep.json()["sets"][2]["number"]
 
     return render.Root(
         child = render.Column(
