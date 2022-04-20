@@ -1,10 +1,13 @@
 load("render.star", "render")
 load("http.star", "http")
 
-BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'2022-04-15','year':'2022'}"
+now = "2022-04-15"
+
+BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % now
 
 def main(config):
     font = config.get("font", "tb-8")
+    print("Using date: '{}'".format(now))
     rep = http.get(BRICKSET_URL)
     if rep.status_code != 200:
         fail("Brickset request failed with status %d", rep.status_code)
