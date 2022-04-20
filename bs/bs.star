@@ -3,8 +3,10 @@ load("time.star", "time")
 load("http.star", "http")
 
 def main(config):
-    today = date.today()
-    print("Today's date:", today)
+    timezone = config.get("timezone") or "America/New_York"
+    now = time.now().in_location(timezone)
+    print("Today's date:", now)
+
     BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % now
 
     font = config.get("font", "tb-8")
