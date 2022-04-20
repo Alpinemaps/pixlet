@@ -22,7 +22,7 @@ def main(config):
                 render.Box(
                     width = 64,
                     height = 1,
-                    color = "#78DECC",
+                    color = "#ed3223",
                 ),
                 render.Marquee(
                     width = 64,
@@ -31,7 +31,7 @@ def main(config):
                 render.Box(
                     width = 64,
                     height = 1,
-                    color = "#78DECC",
+                    color = "#349a47",
                 ),
                 render.Marquee(
                     width = 64,
@@ -40,7 +40,7 @@ def main(config):
                 render.Box(
                     width = 64,
                     height = 1,
-                    color = "#78DECC",
+                    color = "#ecb220",
                 ),
                 render.Marquee(
                     width = 64,
@@ -49,7 +49,7 @@ def main(config):
                 render.Box(
                     width = 64,
                     height = 1,
-                    color = "#78DECC",
+                    color = "#ed3223",
                 ),
             ],
         ),
