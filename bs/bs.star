@@ -3,15 +3,8 @@ load("time.star", "time")
 load("http.star", "http")
 
 def main(config):
-    timestamp = time.time()
-    formatted = timestamp.format("2006-01-02")
-    print("Today's time dot time timestamp:", timestamp)
-    print("Today's timestamp dot format formatted:", formatted)
-
     nowdate = time.now()
     print("Today's time dot now nowdate:", nowdate)
-    nowdateformatted = timestamp.format("2006-01-02")
-    print("Today's timestamp dot format nowdateformatted:", nowdateformatted)
 
     BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % nowdate
 
