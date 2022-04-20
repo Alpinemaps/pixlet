@@ -3,7 +3,13 @@ load("time.star", "time")
 load("http.star", "http")
 
 def main(config):
-    nowdate = time.now()
+    timestamp = time.time()
+                # use layout string to construct an RFC3339 timestamp string,
+                # which is what JSON serializers often use
+                formatted = timestamp.format("2006-01-02")
+                print(timestamp)
+
+          nowdate = time.now()
     print("Today's date:", nowdate)
 
     BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % nowdate
