@@ -13,6 +13,8 @@ def main(config):
     lego0number = rep.json()["sets"][0]["number"]
     lego1name = rep.json()["sets"][1]["name"]
     lego1number = rep.json()["sets"][1]["number"]
+    lego1name = rep.json()["sets"][2]["name"]
+    lego1number = rep.json()["sets"][2]["number"]
 
     return render.Root(
         child = render.Column(
@@ -24,7 +26,7 @@ def main(config):
                 ),
                 render.Marquee(
                     width = 64,
-                    child = render.Text("%s" % lego0number + lego0name, font = font),
+                    child = render.Text("%s" % lego0number + " - " + "%s" % lego0name, font = font),
                 ),
                 render.Box(
                     width = 64,
@@ -33,7 +35,7 @@ def main(config):
                 ),
                 render.Marquee(
                     width = 64,
-                    child = render.Text("Set: %s" % lego1name, font = font),
+                    child = render.Text("%s" % lego1name, font = font),
                 ),
                 render.Box(
                     width = 64,
