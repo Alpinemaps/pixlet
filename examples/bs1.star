@@ -9,7 +9,8 @@ def main(config):
     if rep.status_code != 200:
         fail("Brickset request failed with status %d", rep.status_code)
 
-    lego = rep.json()["sets"][0]["name"]
+    lego0 = rep.json()["sets"][0]["name"]
+    lego1 = rep.json()["sets"][1]["name"]
 
     return render.Root(
         child = render.Column(
@@ -21,7 +22,7 @@ def main(config):
                 ),
                 render.Marquee(
                     width = 64,
-                    child = render.Text("Set: %s" % lego, font = font),
+                    child = render.Text("Set: %s" % lego0, font = font),
                 ),
                 render.Box(
                     width = 64,
@@ -30,7 +31,7 @@ def main(config):
                 ),
                 render.Marquee(
                     width = 64,
-                    child = render.Text("THE QUICK BROWN FOX JUMPS OVER THE LAZY DOG", font = font),
+                    child = render.Text("Set: %s" % lego1, font = font),
                 ),
                 render.Box(
                     width = 64,
