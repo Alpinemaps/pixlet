@@ -7,6 +7,7 @@ def main(config):
     print("Today's time dot now nowdate:", nowdate)
 
     BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % nowdate
+    print(BRICKSET_URL)
 
     font = config.get("font", "tb-8")
     rep = http.get(BRICKSET_URL)
