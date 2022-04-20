@@ -3,7 +3,6 @@ load("time.star", "time")
 load("http.star", "http")
 
 def main(config):
-    from datetime import date
     today = date.today()
     print("Today's date:", today)
     BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % now
