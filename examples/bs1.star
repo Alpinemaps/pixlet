@@ -35,7 +35,7 @@ def main(config):
                 ),
                 render.Marquee(
                     width = 64,
-                    child = render.Text("%s" % lego1name, font = font),
+                    child = render.Text("%s" % lego1number + " - " + "%s" % lego1name, font = font),
                 ),
                 render.Box(
                     width = 64,
@@ -44,7 +44,7 @@ def main(config):
                 ),
                 render.Marquee(
                     width = 64,
-                    child = render.Text("!@#$%^&*()_+:?><~`", font = font),
+                    child = render.Text("%s" % lego2number + " - " + "%s" % lego2name, font = font),
                 ),
                 render.Box(
                     width = 64,
