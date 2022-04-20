@@ -1,7 +1,7 @@
 load("render.star", "render")
 load("http.star", "http")
 
-now = "2022-01-01"
+now = datetime.date.today()
 
 BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % now
 
