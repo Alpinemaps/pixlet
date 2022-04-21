@@ -3,7 +3,7 @@ load("time.star", "time")
 load("humanize.star", "humanize")
 
 def main(config):
-    now = humanize.time_format("yyyy-MM-dd",time.now())
+    now = time.now().format("2006-01-02")
     print("Today:", now)
    
     return render.Root(
