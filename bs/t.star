@@ -9,7 +9,10 @@ def main(config):
     
     print("Today:", now)
     print("Year:", Year)
-    print("Month:", Month)
+    if Month == 4:
+        print("Month:0", Month)
+        else:
+        print("Month:", Month)
     print("Day:", Day)
 
     return render.Root(
