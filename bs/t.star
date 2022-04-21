@@ -1,10 +1,24 @@
 load("render.star", "render")
+load("schema.star", "schema")
 load("time.star", "time")
+load("re.star", "re")
+load("sunrise.star", "sunrise")
+load("encoding/base64.star", "base64")
+load("encoding/json.star", "json")
 
 def main(config):
+    location = config.get(P_LOCATION)
+    location = json.decode(location) if location else {}
+    time_format = H12 if config.bool(P_USE_12H) else H24
+    blink_time = config.bool(P_BLINK_TIME)
+
+    timezone = location.get(
+        "timezone",
+        config.get("$tz", DEFAULT_TIMEZONE),
+    )
     now = config.get("time")
-    now = time.parse_time(now)
-    now_date = now.format("2006-01-02")
+    now = (time.parse_time(now) if now else time.now()).in_location(timezone)
+    now_date = now.format("Mon 2 Jan 2006")
     print("Today:", now_date)
 
     Year = now.year    
