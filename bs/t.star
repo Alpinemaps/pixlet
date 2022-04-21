@@ -7,7 +7,7 @@ load("encoding/base64.star", "base64")
 load("encoding/json.star", "json")
 
 def main(config):
-    location = config.get(P_LOCATION)
+    location = config.get("America/New_York")
     location = json.decode(location) if location else {}
     time_format = H12 if config.bool(P_USE_12H) else H24
     blink_time = config.bool(P_BLINK_TIME)
