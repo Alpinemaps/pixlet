@@ -7,10 +7,7 @@ load("encoding/base64.star", "base64")
 load("encoding/json.star", "json")
 
 def main(config):
-    now = config.get("time")
-    now_date = now.format("Mon 2 Jan 2006")
-    print("Today:", now_date)
-
+    now = time.now
     Year = now.year    
     Month = now.month        
     Day = now.day
