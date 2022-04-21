@@ -11,8 +11,6 @@ def main(config):
     print("Year:", Year)
     if Month == 4:
         print("Month:0", Month)
-        else:
-        print("Month:", Month)
     print("Day:", Day)
 
     return render.Root(
