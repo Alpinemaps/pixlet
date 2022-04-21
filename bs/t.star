@@ -3,6 +3,7 @@ load("time.star", "time")
 
 def main(config):
     now = config.get("time")
+    now = time.parse_time(now)
     now_date = now.format("2006-01-02")
     print("Today:", now_date)
 
