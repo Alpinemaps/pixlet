@@ -3,7 +3,8 @@ load("time.star", "time")
 
 def main(config):
     now = time.now() - time.parse_duration("120h")
-    print("Today:", now)
+    now5 = time.now(now).format("2020-01-02")
+    print("Today:", now5)
 
     return render.Root(
     )
