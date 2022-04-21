@@ -5,7 +5,7 @@ def main(config):
     now = time.now()
     Year = now.year    
     
-    if now.month < 10
+    if now.month < 10:
         Month = "0" + now.month
         else:
         Month = now.month
