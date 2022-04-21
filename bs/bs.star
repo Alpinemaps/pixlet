@@ -4,10 +4,10 @@ load("http.star", "http")
 
 def main(config):
     nowdate = time.now()
-    nowdateparse = time.parse_time(nowdate, "2010-01-01")
-    print("Today's time dot now nowdateparse:", nowdateparse)
+    fivedays = nowdate - 5
+    print("Today's time dot now nowdateparse:", fivedays)
 
-    BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % nowdateparse
+    BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % fivedays
     print(BRICKSET_URL)
 
     font = config.get("font", "tb-8")
