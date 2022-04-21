@@ -3,5 +3,7 @@ load("time.star", "time")
 
 def main(config):
     now = time.now()
+    Year = now.format("2020")
     Month = now.format("01")
-    print("Month:", Month)
+    Day = now.format("01")
+    print("Today: %s", Year, "-%s", Month, "-%s", Day)
