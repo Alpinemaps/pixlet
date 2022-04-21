@@ -2,9 +2,8 @@ load("render.star", "render")
 load("time.star", "time")
 
 def main(config):
-    now = time.now()
-    now5 = time.now() - time.parse_duration("120h")
-    print("Today:", now5)
+    now = time.now() - time.parse_duration("120h")
+    print("Today:", now)
 
     return render.Root(
     )
