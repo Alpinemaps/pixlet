@@ -9,5 +9,8 @@ def main(config):
     now_str = humanize.time_format("yyyy-MM-dd",time.time(year=now.year,month=now.month,day=now.day))
     past_str = humanize.time_format("yyyy-MM-dd",time.time(year=past_date.year,month=past_date.month,day=past_date.day))
     
+    print("now_str:", now_str)
+    print("past_str:", past_str)
+    
     return render.Root(
     )
