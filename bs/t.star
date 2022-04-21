@@ -6,4 +6,4 @@ def main(config):
     Year = now.format("2020")
     Month = now.format("01")
     Day = now.format("01")
-    print("Today:", Year,"-",Month,"-",Day)
+    print("Today:", Year)
