@@ -3,11 +3,9 @@ load("time.star", "time")
 
 def main(config):
     now = time.now().format("2006-01-02")
-    hours = 120
-    now5 = now.Add(time.Duration(-hours)
+    year = now.year
     print("Today:", now)
-    print("hours:", hours)
-    print("5 days ago:", now5)
-
+    print("hours:", year)
+    
     return render.Root(
     )
