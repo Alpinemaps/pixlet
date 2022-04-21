@@ -7,7 +7,7 @@ def main(config):
     Month = now.month
     
     if Month < 10:
-        Month = "0" + now.month
+        Month = "0" + Month
         
     Day = now.day
     
