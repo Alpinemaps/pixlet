@@ -3,12 +3,17 @@ load("time.star", "time")
 load("http.star", "http")
 
 def main(config):
-    nowdate = time.now()
-    nowparse = time.parse_time(nowdate)
-    print("nowdate:", nowdate)
-    print("nowparse:", nowparse)
+    date = time.now()
+    day_only = time.time(year = date.year, month = date.month, day = date.day)
+    five_ago = day_only - time.parse_duration("120h")
+    five_ago = five_ago.format("2006-01-02")
+    
+    print("date:", date)
+    print("day_only:", day_only)
+    print("five_ago:", five_ago)
+    print(dir(five_ago))
 
-    BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % nowparse
+    BRICKSET_URL = "https://brickset.com/api/v3.asmx/getSets?apiKey=3-7lT2-EYit-9z6Xz&userHash=yqhzUwRTKR&params={'updatedSince':'%s','year':'2022'}" % five_ago
     print(BRICKSET_URL)
 
     font = config.get("font", "tb-8")
