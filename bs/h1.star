@@ -11,6 +11,7 @@ def main(config):
     print("date:", date)
     print("day_only:", day_only)
     print("five_ago:", five_ago)
+    print(dir(five_ago))
     
     return render.Root(
     )
