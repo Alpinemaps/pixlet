@@ -2,8 +2,8 @@ load("render.star", "render")
 load("time.star", "time")
 
 def main(config):
-    now = time.now().split()[0]
-    Year = now.year    
+    now = time.now()
+    Year = now.strftime("%Y")    
     Month = now.month        
     Day = now.day
     
