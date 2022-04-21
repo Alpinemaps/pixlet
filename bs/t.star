@@ -7,3 +7,6 @@ def main(config):
     Month = now.format("01")
     Day = now.format("01")
     print("Today:", now)
+    print("Year:", Year)
+    print("Month:", Month)
+    print("Day:", Day)
