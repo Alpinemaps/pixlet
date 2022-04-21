@@ -2,7 +2,10 @@ load("render.star", "render")
 load("time.star", "time")
 
 def main(config):
-    now = time.now()
+    now = config.get("time")
+    now_date = now.format("2006-01-02")
+    print("Today:", now_date)
+
     Year = now.year    
     Month = now.month        
     Day = now.day
