@@ -3,6 +3,7 @@ load("time.star", "time")
 load("humanize.star", "humanize")
 
 def main(config):
+    timezone = config.get("timezone") or "America/New_York"
     now = time.now()
     past_date = now-time.parse_duration("120h")
 
