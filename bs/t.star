@@ -4,11 +4,10 @@ load("time.star", "time")
 def main(config):
     now = time.now()
     Year = now.year    
+    Month = now.month
     
-    if now.month < 10:
+    if Month < 10:
         Month = "0" + now.month
-        else:
-        Month = now.month
         
     Day = now.day
     
